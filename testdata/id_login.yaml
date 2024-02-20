@@ -1,0 +1,11 @@
+valid_user:
+  id: "standard_user"
+  password: "secret_sauce"
+
+invalid_user:
+  id: "standard_user1"
+  password: "secret_sauce1"
+
+blank_user:
+  id: ""
+  password: ""
