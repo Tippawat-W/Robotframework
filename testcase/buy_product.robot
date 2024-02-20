@@ -3,6 +3,9 @@ Resource    ${CURDIR}/../import/import.resource
 
 *** Test Cases ***
 Test for loop
+    FOR    ${values}    IN    ${product_name.values()}
+        Log    Num value is ${values}
+    END
     
 
 *** comment ***
