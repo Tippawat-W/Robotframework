@@ -18,3 +18,7 @@ require id
 
 require password
     common_function.check text should be         ${login_locator.error_login}        Epic sadface: Password is required 
+
+login out success
+    common_function.check text should be          ${login_locator.home_page}                  Swag Labs
+    

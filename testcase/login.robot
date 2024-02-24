@@ -18,4 +18,10 @@ login failed
 
 login success
     login_function.login to system       ${valid_user.id}        ${valid_user.password}
-    login_page.login success
+    product_page.verify access to product page success
+
+login out
+    login_function.login to system       ${valid_user.id}        ${valid_user.password}
+    product_page.verify access to product page success
+    burger_feature.logout from system
+    login_page.login out success
