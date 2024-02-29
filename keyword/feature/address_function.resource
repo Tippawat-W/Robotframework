@@ -1,8 +1,8 @@
 *** keyword ***
 information data
     [Arguments]        ${firstname}        ${lastname}        ${zipcode}
-    address_page.input first name            ${firstname}
-    address_page.input last name             ${lastname}
+    address_page.input firstname            ${firstname}
+    address_page.input lastname             ${lastname}
     address_page.input zipcode               ${zipcode}
 
 access to payment page

@@ -13,5 +13,8 @@ Resource        ${CURDIR}/../keyword/page/address_page.resource
 Resource        ${CURDIR}/../keyword/page/payment_page.resource
 Resource        ${CURDIR}/../keyword/page/finish_page.resource
 
+Resource        ${CURDIR}/../component/keyword/feature/burger_feature.resource
+Resource        ${CURDIR}/../component/keyword/feature/cart_feature.resource
 
-
+Resource        ${CURDIR}/../component/keyword/page/burger_navbar.resource
+Resource        ${CURDIR}/../component/keyword/page/cart_navbar.resource
