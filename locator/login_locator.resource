@@ -9,7 +9,7 @@ ${login_locator.home_page}                xpath=//div[@class="login_container"]/
 
 
 
-
+*** Comments ***
 //div/a/following-sibling::div[@class='inventory_item_desc']
 
 //div/a/div[@class="inventory_item_name" and contains(text(),"Sauce Labs Backpack") ]/following-sibling::div[@class='inventory_item_desc']

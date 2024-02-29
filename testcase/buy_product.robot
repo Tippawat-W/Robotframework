@@ -8,7 +8,7 @@ Order product success
     FOR    ${values}    IN  @{product_name.values()}
         product_function.add product to cart         ${values}
     END
-    product_function.access to cart page 
+    cart_feature.access to cart page
     cart_function.access to address page
     address_function.information data            ${address_valid.firstname}    ${address_valid.lastname}    ${address_valid.zipcode}
     address_function.access to payment page
