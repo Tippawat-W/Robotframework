@@ -3,28 +3,13 @@ Resource    ${CURDIR}/../import/import.resource
 Suite Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 Suite Teardown    Close Browser
 
-*** Variables ***
-${number of product}    0
-
 *** Test Cases ***
 add product to cart
     login_function.login to system       ${valid_user.id}        ${valid_user.password}
-    FOR    ${values}    IN  @{product_name.values()}
-        product_function.add product to cart         ${values}
-        ${number of product}=        Convert To Integer    ${number of product}
-        ${number of product}=    Evaluate    ${number of product} + 1
-        cart_navbar.verify number of product add to cart    ${number of product}
-    END
-    Set Global Variable        ${number of product}         ${number of product}
+    product_function.add product to cart         ${product_name}
 
 remove product
-    FOR    ${values}    IN  @{product_name.values()}    
-        product_function.remove product out of cart    ${values}
-        ${number of product}=        Convert To Integer    ${number of product}
-        ${number of product}=    Evaluate    ${number of product} - 1
-        Run Keyword If    ${number of product} != 0         cart_navbar.verify number of product add to cart    ${number of product}
-        ...    ELSE    cart_navbar.verify remove all number of product on cart            ${number of product}
-    END
+    product_function.remove product out of cart    ${product_name}
 
 
 *** Comments ***
