@@ -1,5 +1,5 @@
 *** Setting ***
-Resource    ${CURDIR}/../import/import.resource
+Resource    ${CURDIR}/../../import/import.resource
 Suite Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 Test Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 
