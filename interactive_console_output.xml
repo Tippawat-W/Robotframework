@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20240301 02:01:46.834" rpa="false" schemaversion="4">
+<robot generator="Robot 6.1 (Python 3.11.4 on win32)" generated="20240312 22:44:50.137" rpa="false" schemaversion="4">
 <suite id="s1" name="Robot Interactive Console" source="c:\Users\Magis\.vscode\extensions\robocorp.robotframework-lsp-1.11.0\src\robotframework_ls\vendored\robotframework_interactive\robot_interactive_console.robot">
 <test id="s1-t1" name="Default Task/Test" line="5">
 <kw name="Interpreter Main Loop" library="MainLoop">
-<status status="PASS" starttime="20240301 02:01:46.853" endtime="20240301 02:01:49.480"/>
+<kw name="login_function.login to system">
+<arg>${blank_user.id}</arg>
+<arg>${valid_user.password}</arg>
+<msg timestamp="20240312 22:44:50.441" level="FAIL">No keyword with name 'login_function.login to system' found.</msg>
+<status status="FAIL" starttime="20240312 22:44:50.441" endtime="20240312 22:44:50.441"/>
 </kw>
-<status status="PASS" starttime="20240301 02:01:46.853" endtime="20240301 02:01:49.480"/>
+<kw name="login_page.require id">
+<status status="NOT RUN" starttime="20240312 22:44:50.442" endtime="20240312 22:44:50.443"/>
+</kw>
+<status status="PASS" starttime="20240312 22:44:50.158" endtime="20240312 22:44:51.962"/>
+</kw>
+<status status="PASS" starttime="20240312 22:44:50.158" endtime="20240312 22:44:51.962"/>
 </test>
-<status status="PASS" starttime="20240301 02:01:46.835" endtime="20240301 02:01:49.481"/>
+<status status="PASS" starttime="20240312 22:44:50.138" endtime="20240312 22:44:51.963"/>
 </suite>
 <statistics>
 <total>
