@@ -22,5 +22,15 @@ verify remove from cart button change to add correct
 click cart button
     common_function.click by element         ${locator.cart_button}
 
+click product name
+    [Arguments]        ${product_name}
+    ${locator.product_url}=                  common_function.change product name     ${product_name}        ${locator.product_name}
+    common_function.click by element         ${locator.product_url}
+
+click product image
+    [Arguments]        ${product_name}
+    ${locator.product_url}=                  common_function.change product name     ${product_name}        ${locator.product_image}
+    common_function.click by element         ${locator.product_url}
+
 verify access to product page success
     common_function.check text should be     ${locator.header}        Products
