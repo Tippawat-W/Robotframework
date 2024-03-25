@@ -1,15 +1,30 @@
 *** Setting ***
-Resource    ${CURDIR}/../import/import.resource
+Resource    ${CURDIR}/../../import/import.resource
 Suite Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 Suite Teardown    Close Browser
 
 *** Test Cases ***
-add product to cart
+
+Verify that user can add product to cart when user click Add to cart button on product list page.
+    [Tags]              PL_006
     login_function.login to system       ${valid_user.id}        ${valid_user.password}
     product_function.add product to cart         ${product_name}
 
-remove product
+Verify that user can remove product from cart when user click Remove button on product list page.
+    [Tags]              PL_007
     product_function.remove product out of cart    ${product_name}
+
+Verify that system rediect to product detail page when click product name
+    [Tags]              PL_008
+    product_function.access to detail page by product name         ${product_name.no_1}
+    product_detail_function.back to product list page
+
+Verify that system rediect to product detail page when click product image
+    [Tags]              PL_009
+    product_function.access to detail page by product image         ${product_name.no_1}
+
+
+
 
 
 *** Comments ***

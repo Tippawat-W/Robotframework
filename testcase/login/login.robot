@@ -5,32 +5,32 @@ Test Teardown
 
 *** Test Cases ***
 
-login success
+verify that system can login success
     [Tags]     LG_001
     login_function.login to system       ${valid_user.id}        ${valid_user.password}
     product_page.verify access to product page success
 
-login failed invalid id
+verify that system can not login when use invalid id
     [Tags]     LG_002
     login_function.login to system       ${invalid_user.id}        ${valid_user.password}
     login_page.login failed
 
-login blank id
+verify that system can not login when use blank id
     [Tags]     LG_003
     login_function.login to system       ${blank_user.id}        ${valid_user.password}
     login_page.require id
 
-login failed invalid password
+verify that system can not login when use invalid password
     [Tags]     LG_004
     login_function.login to system       ${valid_user.id}        ${invalid_user.password}
     login_page.login failed
 
-login blank password
+verify that system can not login when use blank password
     [Tags]     LG_005
     login_function.login to system       ${valid_user.id}        ${blank_user.password}
     login_page.require password
 
-login out
+verify that system can login out success
     [Tags]     LG_006
     login_function.login to system       ${valid_user.id}        ${valid_user.password}
     product_page.verify access to product page success

@@ -24,3 +24,13 @@ remove product out of cart
         Run Keyword If    ${number of product} != 0         cart_navbar.verify number of product add to cart    ${number of product}
         ...    ELSE    cart_navbar.verify remove all number of product on cart            ${number of product}
     END
+
+access to detail page by product name
+    [Arguments]        ${product_name}
+    product_page.click product name         ${product_name}
+    product_detail_page.verify produect detail success       ${product_name}
+
+access to detail page by product image
+    [Arguments]        ${product_name}
+    product_page.click product image                    ${product_name}
+    product_detail_page.verify produect detail success       ${product_name}         
