@@ -19,7 +19,7 @@ Verify that system redirect to product detail page when user click product name 
 Verify that user can remove product from cart when user click Remove button on cart page.
     [Tags]              CP_003
     cart_feature.access to cart page
-    cart_function.remove product out of cart            ${product_name}
+    cart_function.remove product out of cart            ${product_name.no_1}
 
 Verify that system redirect to product list page when user click Continue Shopping button. 
     [Tags]              CP_004

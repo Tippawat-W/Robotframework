@@ -11,7 +11,7 @@ Verify that user can add product to cart when user click Add to cart button on p
     product_function.access to detail page by product name         ${product_name.no_1}
     product_detail_function.add product to cart                    ${product_name.no_1}
 
-Verify that user can add product to cart when user click Add to cart button on product detail page.
+Verify that user can remove product to cart when user click remove button on product detail page.
     [Tags]              PD_002
     product_detail_function.remove product out of cart             ${product_name.no_1}
 

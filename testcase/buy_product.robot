@@ -5,9 +5,7 @@ Resource    ${CURDIR}/../import/import.resource
 Order product success
     common_function.open website                 ${web_site.saucedemo}        ${web_broser.chrome}
     login_function.login to system               ${valid_user.id}        ${valid_user.password}
-    FOR    ${values}    IN  @{product_name.values()}
-        product_function.add product to cart         ${values}
-    END
+    product_function.add product to cart         ${product_name}
     cart_feature.access to cart page
     cart_function.access to address page
     address_function.information data            ${address_valid.firstname}    ${address_valid.lastname}    ${address_valid.zipcode}

@@ -25,8 +25,6 @@ Verify that system rediect to product detail page when click product image
 
 
 
-
-
 *** Comments ***
 
 cart_navbar.verify number of product add to cart    ${values}
