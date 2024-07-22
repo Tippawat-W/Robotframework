@@ -15,5 +15,3 @@ Order product success
     END
     payment_function.access to finish page
     finish_page.success order
-    
-*** comment ***
