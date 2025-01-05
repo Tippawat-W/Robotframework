@@ -10,9 +10,7 @@ Order product success
     cart_function.access to address page
     address_function.information data            ${address_valid.firstname}    ${address_valid.lastname}    ${address_valid.zipcode}
     address_function.access to payment page
-    FOR    ${values}    IN  @{product_name.values()}
-        payment_function.check product name          ${values}
-    END
+    payment_function.check product name          ${product_name}
     payment_function.access to finish page
     finish_page.success order
     

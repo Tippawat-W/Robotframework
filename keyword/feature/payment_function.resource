@@ -5,4 +5,6 @@ access to finish page
 
 check product name
     [Arguments]           ${product_name}
-    payment_page.product name         ${product_name}
+    FOR    ${values}    IN  @{product_name.values()}
+        payment_page.product name          ${values}
+    END
