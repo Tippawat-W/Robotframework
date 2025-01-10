@@ -1,14 +1,14 @@
 *** keyword ***
-click cart button
-    common_function.click by element            ${cart_locator.menu_botton} 
+Click Cart Button
+    common_function.Click By Element            ${cart_locator.menu_botton} 
 
-verify number of product add to cart
+Verify Number Of Product Add To Cart
     [Arguments]            ${number of product}
     ${number of product}=        Convert To String     ${number of product}
     ${cart_locator.number_of_product}=        String.Replace string     ${cart_locator.number_of_product}     {number_of_product}    ${number_of_product}
-    common_function.check text should be               ${cart_locator.number_of_product}          ${number of product}
+    common_function.Check Text Should Be               ${cart_locator.number_of_product}          ${number of product}
 
-verify remove all number of product on cart
+Verify Remove All Number Of Product On Cart
     [Arguments]            ${number of product}
     ${number of product}=        Convert To String     ${number of product}
     ${cart_locator.number_of_product}=         String.Replace string     ${cart_locator.number_of_product}     {number_of_product}    ${number_of_product}

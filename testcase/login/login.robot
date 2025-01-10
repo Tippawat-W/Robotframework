@@ -5,34 +5,34 @@ Test Teardown
 
 *** Test Cases ***
 
-verify that system can login success
+Verify That System Can Login Success.
     [Tags]     LG_001
-    login_function.login to system       ${valid_user.id}        ${valid_user.password}
-    product_page.verify access to product page success
+    login_function.Login To System       ${valid_user.id}        ${valid_user.password}
+    product_page.Verify Access To Product Page Success
 
-verify that system can not login when use invalid id
+Verify That System Can Not Login When Use Invalid Id.
     [Tags]     LG_002
-    login_function.login to system       ${invalid_user.id}        ${valid_user.password}
-    login_page.login failed
+    login_function.Login To System       ${invalid_user.id}        ${valid_user.password}
+    login_page.Login Failed
 
-verify that system can not login when use blank id
+Verify That System Can Not Login When Use Blank Id.
     [Tags]     LG_003
-    login_function.login to system       ${blank_user.id}        ${valid_user.password}
-    login_page.require id
+    login_function.Login To System       ${blank_user.id}        ${valid_user.password}
+    login_page.Require Id
 
-verify that system can not login when use invalid password
+Verify That System Can Not Login When Use Invalid Password.
     [Tags]     LG_004
-    login_function.login to system       ${valid_user.id}        ${invalid_user.password}
-    login_page.login failed
+    login_function.Login To System       ${valid_user.id}        ${invalid_user.password}
+    login_page.Login Failed
 
-verify that system can not login when use blank password
+Verify That System Can Not Login When Use Blank Password.
     [Tags]     LG_005
-    login_function.login to system       ${valid_user.id}        ${blank_user.password}
-    login_page.require password
+    login_function.Login To System       ${valid_user.id}        ${blank_user.password}
+    login_page.Require Password
 
-verify that system can login out success
+Verify That System Can Login Out Success.
     [Tags]     LG_006
-    login_function.login to system       ${valid_user.id}        ${valid_user.password}
-    product_page.verify access to product page success
-    burger_feature.logout from system
-    login_page.login out success
+    login_function.Login To System       ${valid_user.id}        ${valid_user.password}
+    product_page.Verify Access To Product Page Success
+    burger_feature.Logout From System
+    login_page.Login Out Success

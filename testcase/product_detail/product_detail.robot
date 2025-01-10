@@ -5,16 +5,16 @@ Suite Teardown    Close Browser
 
 *** Test Cases ***
 
-Verify that user can add product to cart when user click Add to cart button on product detail page.
+Verify That User Can Add Product To Cart When User Click Add To Cart Button On Product Detail Page.
     [Tags]              PD_001
-    login_function.login to system       ${valid_user.id}        ${valid_user.password}
-    product_function.access to detail page by product name         ${product_name.no_1}
-    product_detail_function.add product to cart                    ${product_name.no_1}
+    login_function.Login To System       ${valid_user.id}        ${valid_user.password}
+    product_function.Access To Detail Page By Product Name         ${product_name.no_1}
+    product_detail_function.Add Product To Cart                    ${product_name.no_1}
 
-Verify that user can remove product to cart when user click remove button on product detail page.
+Verify That User Can Remove Product To Cart When User Click Remove Button On Product Detail Page.
     [Tags]              PD_002
-    product_detail_function.remove product out of cart             ${product_name.no_1}
+    product_detail_function.Remove Product Out Of Cart             ${product_name.no_1}
 
-Verify that system rediect to product list page when user click Back to products button from product detail page.
+Verify That System Rediect To Product List Page When User Click Back To Products Button From Product Detail Page.
     [Tags]              PD_003
-    product_detail_function.back to product list page
+    product_detail_function.Back To Product List Page
