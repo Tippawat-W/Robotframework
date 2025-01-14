@@ -8,21 +8,13 @@ Click Back To Products Button
     common_function.Click By Element       ${locator.back_to_products_button}
 
 Add Item To Cart
-    [Arguments]        ${product_name}
-    ${locator.product_url}=                    common_function.Change Name To Url       ${product_name}    ${locator.product_detail_add_button} 
-    common_function.Click By Element       ${locator.product_url}
+    common_function.Click By Element       ${locator.product_detail_add_button} 
 
 Verify Add To Cart Button Change To Remove Correct
-    [Arguments]        ${product_name}
-    ${locator.product_url}=                common_function.Change Name To Url     ${product_name}          ${locator.product_detail_remove_button}
-    common_function.Check Text Should Be     ${locator.product_url}        Remove
+    common_function.Check Text Should Be    ${locator.product_detail_remove_button}         Remove
 
 Remove Item From Cart
-    [Arguments]         ${product_name}
-    ${locator.product_url}=                common_function.Change Name To Url     ${product_name}          ${locator.product_detail_remove_button}
-    common_function.Click By Element         ${locator.product_url}
+    common_function.Click By Element         ${locator.product_detail_remove_button}  
 
 Verify Remove From Cart Button Change To Add Correct
-    [Arguments]        ${product_name}
-    ${locator.product_url}=                  common_function.Change Name To Url     ${product_name}        ${locator.product_detail_add_button}
-    common_function.Check Text Should Be     ${locator.product_url}        Add to cart
+    common_function.Check Text Should Be     ${locator.product_detail_add_button}         Add to cart
