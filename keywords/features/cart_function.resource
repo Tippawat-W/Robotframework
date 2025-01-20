@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Access To Address Page
     cart_page.Click Checkout Button
     address_page.Verify Access To Address Page Success

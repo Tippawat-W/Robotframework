@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Verify Product Detail Success
     [Arguments]             ${product_name}
     ${locator.product_url}=                  common_function.Change Product Name     ${product_name}        ${locator.product_detail_name}

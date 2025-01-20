@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Input Username Id
     [Arguments]    ${id}
     SeleniumLibrary.Input Text           ${login_locator.username_id}         ${id}

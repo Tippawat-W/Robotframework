@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Add Item To Cart
     [Arguments]        ${product_name}
     ${locator.product_url}=                    common_function.Change Name To Url       ${product_name}        ${locator.add_to_cart_item}

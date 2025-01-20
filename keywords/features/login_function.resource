@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Login To System
     [Arguments]    ${id}    ${password}
     login_page.Input Username Id        ${id}
