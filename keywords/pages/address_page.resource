@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Input Firstname
         [Arguments]        ${firstname}
         common_function.Input Data     ${address_locator.first_name}        ${firstname} 

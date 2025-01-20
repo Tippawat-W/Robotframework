@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Click Cart Button
     common_function.Click By Element            ${cart_locator.menu_botton} 
 

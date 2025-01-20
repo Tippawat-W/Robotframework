@@ -1,7 +1,7 @@
 *** Variables ***
 ${number of product}    0
 
-*** keyword ***
+*** Keywords ***
 Back To Product List Page
     product_detail_page.Click Back To Products Button
     product_page.Verify Access To Product Page Success  

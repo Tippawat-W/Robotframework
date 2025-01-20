@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Click Finish Button
         common_function.Click By Element         ${payment_locator.finish_button} 
 

@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Information Data
     [Arguments]        ${firstname}        ${lastname}        ${zipcode}
     address_page.Input Firstname            ${firstname}

@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Access To Finish Page
     payment_page.Click Finish Button
     finish_page.Verify Access To Finish Page Success

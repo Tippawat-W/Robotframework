@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Click Open Burger Menu
     common_function.Click By Element        ${burger_locator.menu_botton}
 

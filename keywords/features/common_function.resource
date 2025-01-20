@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Open Website
     [Arguments]        ${browser}        ${url}
     SeleniumLibrary.Open Browser        ${browser}        ${url}

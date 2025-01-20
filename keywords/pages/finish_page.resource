@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Success Order
         common_function.Check Text Should Be         ${finish_locator.payment_success}        Thank you for your order!
 

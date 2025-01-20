@@ -1,4 +1,4 @@
-*** keyword ***
+*** Keywords ***
 Click Checkout Button
         common_function.Click By Element         ${cart_locator.checkout_button}
 

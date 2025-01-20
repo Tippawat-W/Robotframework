@@ -2,7 +2,7 @@
 ${number of product}    0
 
 
-*** keyword ***
+*** Keywords ***
 Add Product To Cart
     [Arguments]        ${product_name}
     FOR    ${product_name}    IN  @{product_name.values()}
