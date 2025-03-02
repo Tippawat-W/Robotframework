@@ -3,7 +3,7 @@ ${number of product}    0
 
 
 *** Keywords ***
-Add Product To Cart
+Add Product To Cart On Product List Page
     [Arguments]        ${product_name}
     FOR    ${product_name}    IN  @{product_name.values()}
         product_page.Add Item To Cart                 ${product_name}
@@ -12,7 +12,7 @@ Add Product To Cart
         ${number of product}=    Evaluate    ${number of product} + 1
         cart_navbar.Verify Number Of Product Add To Cart    ${number of product}
     END
-        Set Suite Variable        ${number of product}         ${number of product}
+        Set Test Variable        ${number of product}         ${number of product}
 
 Remove Product Out Of Cart
     [Arguments]        ${product_name}

@@ -15,7 +15,7 @@ Click Product Name
         ${locator.product_url}=                  common_function.Change Product Name     ${product_name}        ${cart_locator.product_name}
         common_function.Click By Element         ${locator.product_url}
 
-Click Continue Button
+Click Continue Button On Cart Page
         common_function.Click By Element         ${cart_locator.continue_shop_button} 
 
 Click Remove Button
