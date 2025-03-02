@@ -14,11 +14,11 @@ Access To Product Detail Page
     cart_page.Click Product Name         ${product_name}
     product_detail_page.Verify Product Detail Success       ${product_name}
 
-Back To Product List Page
-    cart_page.Click Continue Button
+Back To Product List Page On Cart Page
+    cart_page.Click Continue Button On Cart Page
     product_page.Verify Access To Product Page Success
 
-Remove Product Out Of Cart
+Remove Product Out Of Cart On Cart Page
     [Arguments]        ${product_name}
     ${is_dict}    Evaluate    isinstance($product_name, dict)
     IF      ${is_dict}     
@@ -30,11 +30,6 @@ Remove Product Out Of Cart
         cart_page.Click Remove Button                   ${product_name}
         cart_page.Verify Remove Product Success         ${product_name}
     END
-
-
-
-
-
 
 
 

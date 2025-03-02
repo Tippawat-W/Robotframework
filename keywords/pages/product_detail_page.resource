@@ -10,11 +10,11 @@ Click Back To Products Button
 Add Item To Cart
     common_function.Click By Element       ${locator.product_detail_add_button} 
 
-Verify Add To Cart Button Change To Remove Correct
+Verify Add To Cart Button Change To Remove Correct On Product Detail Page
     common_function.Check Text Should Be    ${locator.product_detail_remove_button}         Remove
 
 Remove Item From Cart
     common_function.Click By Element         ${locator.product_detail_remove_button}  
 
-Verify Remove From Cart Button Change To Add Correct
+Verify Remove From Cart Button Change To Add Correct On Product Detail Page
     common_function.Check Text Should Be     ${locator.product_detail_add_button}         Add to cart
