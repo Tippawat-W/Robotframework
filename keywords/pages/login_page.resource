@@ -1,4 +1,14 @@
 *** Keywords ***
+Login To System is '${id}' And '${password}'
+    Input Username Id        ${id}
+    login_page.Input Username Password        ${password}
+
+Login To System
+    [Arguments]    ${id}    ${password}
+    Input Username Id        ${id}
+    Input Username Password        ${password}
+    Click Login Button
+
 Input Username Id
     [Arguments]    ${id}
     SeleniumLibrary.Input Text           ${login_locator.username_id}         ${id}

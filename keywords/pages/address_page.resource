@@ -1,4 +1,13 @@
 *** Keywords ***
+Information '${firstname}' and '${lastname}' and '${zipcode}' Data
+    Input Firstname            ${firstname}
+    Input Lastname             ${lastname}
+    Input Zipcode               ${zipcode}
+
+Access To Payment Page
+    Click Continue Button
+    payment_page.Verify Access To Payment Page Success
+
 Input Firstname
         [Arguments]        ${firstname}
         common_function.Input Data     ${address_locator.first_name}        ${firstname} 

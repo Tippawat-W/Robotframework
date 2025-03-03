@@ -1,5 +1,12 @@
 *** Setting ***
-Resource    ${CURDIR}/../../import/import.resource
+Resource        ${CURDIR}/../../resource/import/import.resource
+Resource        ${CURDIR}/../../keywords/pages/login_page.resource
+Resource        ${CURDIR}/../../keywords/pages/product_page.resource
+Resource        ${CURDIR}/../../keywords/pages/cart_page.resource
+Resource        ${CURDIR}/../../keywords/pages/address_page.resource
+Resource        ${CURDIR}/../../keywords/pages/payment_page.resource
+Resource        ${CURDIR}/../../keywords/pages/finish_page.resource
+Resource        ${CURDIR}/../../component/keywords/pages/cart_navbar.resource
 Test Teardown    Close Browser
 
 *** Test Cases ***

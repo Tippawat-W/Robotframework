@@ -1,4 +1,8 @@
 *** Keywords ***
+Access To Cart Page
+    Click Cart Button On Navbar
+    cart_page.Verify Access To Cart Page Success
+
 Click Cart Button On Navbar
     common_function.Click By Element            ${cart_locator.menu_botton} 
 
