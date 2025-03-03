@@ -7,3 +7,5 @@ Information '${firstname}' and '${lastname}' and '${zipcode}' Data
 Access To Payment Page
     address_page.Click Continue Button
     payment_page.Verify Access To Payment Page Success
+
+#I think all of keywords in folder features should move to each page keywords
