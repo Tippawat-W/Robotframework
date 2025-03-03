@@ -1,4 +1,8 @@
 *** Keywords ***
+Logout From System
+    Click Open Burger Menu
+    Click Logout
+
 Click Open Burger Menu
     common_function.Click By Element        ${burger_locator.menu_botton}
 

@@ -1,4 +1,36 @@
 *** Keywords ***
+Access To Address Page
+    Click Checkout Button
+    address_page.Verify Access To Address Page Success
+
+Verify Cart Page With Product On Cart
+    [Arguments]         ${product_name}
+    FOR    ${product_name}    IN  @{product_name.values()}
+        Verify Display Product To Cart Page Success                  ${product_name}
+    END
+
+Access To Product Detail Page
+    [Arguments]        ${product_name}
+   Click Product Name         ${product_name}
+    product_detail_page.Verify Product Detail Success       ${product_name}
+
+Back To Product List Page On Cart Page
+    Click Continue Button On Cart Page
+    product_page.Verify Access To Product Page Success
+
+Remove Product Out Of Cart On Cart Page
+    [Arguments]        ${product_name}
+    ${is_dict}    Evaluate    isinstance($product_name, dict)
+    IF      ${is_dict}     
+        FOR    ${product_name}    IN  @{product_name.values()}
+            Click Remove Button                   ${product_name}
+            Verify Remove Product Success         ${product_name}
+        END
+    ELSE
+       Click Remove Button                   ${product_name}
+       Verify Remove Product Success         ${product_name}
+    END
+
 Click Checkout Button
         common_function.Click By Element         ${cart_locator.checkout_button}
 

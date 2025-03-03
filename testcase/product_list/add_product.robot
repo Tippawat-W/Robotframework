@@ -1,5 +1,9 @@
 *** Setting ***
-Resource    ${CURDIR}/../../import/import.resource
+Resource    ${CURDIR}/../../resource/import/import.resource
+Resource        ${CURDIR}/../../keywords/pages/login_page.resource
+Resource        ${CURDIR}/../../keywords/pages/product_page.resource
+Resource        ${CURDIR}/../../keywords/pages/product_detail_page.resource
+Resource        ${CURDIR}/../../component/keywords/pages/cart_navbar.resource
 Test Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 Test Teardown    Close Browser
 
