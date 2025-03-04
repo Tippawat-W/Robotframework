@@ -1,0 +1,6 @@
+burger_navbar_locator:
+  menu_botton: id=react-burger-menu-btn
+  all_item_tap: id=inventory_sidebar_link
+  about_tap: id=about_sidebar_link
+  logout_tap:  id=logout_sidebar_link
+  reset_tap: id=reset_sidebar_link

@@ -1,16 +1,17 @@
 *** Setting ***
 Resource        ${CURDIR}/../../resource/import/import.resource
-Resource        ${CURDIR}/../../keywords/pages/login_page.resource
-Resource        ${CURDIR}/../../keywords/pages/product_page.resource
-Resource        ${CURDIR}/../../keywords/pages/cart_page.resource
-Resource        ${CURDIR}/../../keywords/pages/address_page.resource
-Resource        ${CURDIR}/../../keywords/pages/payment_page.resource
-Resource        ${CURDIR}/../../keywords/pages/finish_page.resource
-Resource        ${CURDIR}/../../component/keywords/pages/cart_navbar.resource
+Resource        ${CURDIR}/../../keywords/login_keywords.resource
+Resource        ${CURDIR}/../../keywords/product_keywords.resource
+Resource        ${CURDIR}/../../keywords/cart_keywords.resource
+Resource        ${CURDIR}/../../keywords/address_keywords.resource
+Resource        ${CURDIR}/../../keywords/payment_keywords.resource
+Resource        ${CURDIR}/../../keywords/finish_keywords.resource
+Resource        ${CURDIR}/../../keywords/cart_navbar_keywords.resource
 Test Teardown    Close Browser
 
 *** Test Cases ***
 Order Product Success
+    [Tags]    High
     Given Open Website                 ${web_site.saucedemo}        ${web_broser.chrome}
     And Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button

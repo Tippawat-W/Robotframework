@@ -1,18 +1,18 @@
 *** Setting ***
 Resource        ${CURDIR}/../../resource/import/import.resource
-Resource        ${CURDIR}/../../keywords/pages/login_page.resource
-Resource        ${CURDIR}/../../keywords/pages/product_page.resource
-Resource        ${CURDIR}/../../keywords/pages/cart_page.resource
-Resource        ${CURDIR}/../../keywords/pages/product_detail_page.resource
-Resource        ${CURDIR}/../../component/keywords/pages/cart_navbar.resource
-Resource        ${CURDIR}/../../keywords/pages/address_page.resource
+Resource        ${CURDIR}/../../keywords/login_keywords.resource
+Resource        ${CURDIR}/../../keywords/product_keywords.resource
+Resource        ${CURDIR}/../../keywords/cart_keywords.resource
+Resource        ${CURDIR}/../../keywords/product_detail_keywords.resource
+Resource        ${CURDIR}/../../keywords/cart_navbar_keywords.resource
+Resource        ${CURDIR}/../../keywords/address_keywords.resource
 Test Setup     Open Browser    ${web_site.saucedemo}        ${web_broser.chrome}
 Test Teardown    Close Browser
 
 *** Test Cases ***
 
 Verify That System Display Product Add To Cart Already On Cart Page
-    [Tags]              CP_001
+    [Tags]              CP_001        Medium
     Given Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
     And Verify Access To Product Page Success
@@ -22,7 +22,7 @@ Verify That System Display Product Add To Cart Already On Cart Page
     And Verify Cart Page With Product On Cart          ${product_name}
 
 Verify That System Redirect To Product Detail Page When User Click Product Name On Cart Page.
-    [Tags]              CP_002
+    [Tags]              CP_002        Medium
     Given Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
     And Verify Access To Product Page Success
@@ -34,7 +34,7 @@ Verify That System Redirect To Product Detail Page When User Click Product Name 
     And Verify Product Detail Success                    ${product_name.no_1}
 
 Verify That User Can Remove Product From Cart When User Click Remove Button On Cart Page.
-    [Tags]              CP_003
+    [Tags]              CP_003        High
     Given Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
     And Verify Access To Product Page Success
@@ -46,7 +46,7 @@ Verify That User Can Remove Product From Cart When User Click Remove Button On C
     Then Verify Remove Product Success                   ${product_name.no_1}
 
 Verify That System Redirect To Product List Page When User Click Continue Shopping Button. 
-    [Tags]              CP_004
+    [Tags]              CP_004        Medium
     Given Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
     And Verify Access To Product Page Success
@@ -56,7 +56,7 @@ Verify That System Redirect To Product List Page When User Click Continue Shoppi
     Then Verify Access To Product Page Success 
 
 Verify That System Redirect To Check Out Page When User Click Check Out Button. 
-    [Tags]              CP_005
+    [Tags]              CP_005        High
     Given Login To System is '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
     And Verify Access To Product Page Success
@@ -68,31 +68,4 @@ Verify That System Redirect To Check Out Page When User Click Check Out Button.
     Then Verify Access To Address Page Success
 
 
-*** Comments ***
 
-Verify That System Display Product Add To Cart Already On Cart Page
-    [Tags]              CP_001
-    Given Login To System is '${valid_user.id}' And '${valid_user.password}'
-    And Click Login Button
-    And Verify Access To Product Page Success
-    product_function.Add Product To Cart On Product List Page         ${product_name}
-    cart_navbar.Click Cart Button On Navbar
-    cart_function.Verify Cart Page With Product On Cart  ${product_name}
-
-Verify That System Redirect To Product Detail Page When User Click Product Name On Cart Page.
-    [Tags]              CP_002
-    cart_function.Access To Product Detail Page         ${product_name.no_1}
-
-Verify That User Can Remove Product From Cart When User Click Remove Button On Cart Page.
-    [Tags]              CP_003
-    cart_feature.Access To Cart Page
-    cart_function.Remove Product Out Of Cart On Cart page         ${product_name.no_1}
-
-Verify That System Redirect To Product List Page When User Click Continue Shopping Button. 
-    [Tags]              CP_004
-    cart_function.Back To Product List Page
-
-Verify That System Redirect To Check Out Page When User Click Check Out Button. 
-    [Tags]              CP_005
-    cart_feature.Access To Cart Page
-    cart_function.Access To Address Page
