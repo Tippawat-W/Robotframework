@@ -1,0 +1,8 @@
+login_locator:
+  username_id:  id=user-name
+  username_password: id=password
+  click_button_login: id=login-button
+  error_login:  xpath=//div[@class="login-box"]//h3[@data-test="error"]
+  success_login: xpath=//div/span[@class="title" and contains(text(),"Products")]
+  home_page: xpath=//div[@class="login_container"]/div[text() = 'Swag Labs']
+

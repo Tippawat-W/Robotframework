@@ -1,0 +1,7 @@
+address_locator:
+  continue: id=continue
+  cancel: id=cancel
+  first_name: id=first-name
+  last_name:  id=last-name
+  zipcode: id=postal-code
+  header: xpath=//div[@class="header_secondary_container"]/span[contains(text(),"Your Information")]
