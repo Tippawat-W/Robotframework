@@ -1,9 +1,0 @@
-cart_locator:
-  checkout_button: id=checkout
-  continue_shop_button: id=continue-shopping
-  remove_button: id=remove-{product_name}
-  product_name:  xpath=//div[@class="inventory_item_name" and contains(text(),"{product_name}")]
-  product_price: xpath=//div[@class="inventory_item_price" and contains(text(),"$")]
-  header: xpath=//div[@class="header_secondary_container"]/span[contains(text(),"Your Cart")]
-
-

@@ -1,9 +1,0 @@
-payment_locator:
-  finish_button:  id=finish
-  cancel_button: id=cancel
-  product_name: xpath=//div[@class="inventory_item_name" and contains(text(),"{product_name}")]
-  product_price:  xpath=//div[@class="inventory_item_price" and contains(text(),"$")]
-  item_total: xpath=//div[@class="summary_subtotal_label" and contains(text(),"Item total")]
-  tax: xpath=//div[@class="summary_tax_label" and contains(text(),"Tax")]
-  total: xpath=//div[@class="summary_info_label summary_total_label" and contains(text(),"Total")]
-  header: xpath=//div[@class="header_secondary_container"]/span[contains(text(),"Overview")]
