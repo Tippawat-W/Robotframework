@@ -1,4 +1,0 @@
-finish_locator:
-  payment_success: xpath=//h2[@class="complete-header" and contains(text(),"Thank you for your order!")]
-  home_button: id=back-to-products
-  header: xpath=//div[@class="header_secondary_container"]/span[contains(text(),"Complete!")]

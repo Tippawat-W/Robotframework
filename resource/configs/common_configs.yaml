@@ -1,0 +1,9 @@
+#Time_out_setup
+GLOBAL_TIMEOUT: 10s
+
+#Count_product_setup
+number of product: 0
+
+web_brower:
+  chrome: chrome
+  firefox: firefox
