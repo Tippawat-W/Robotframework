@@ -1,11 +1,11 @@
 *** Setting ***
-Resource    ${CURDIR}/../../resource/import/import.robot
-Resource    ${CURDIR}/../../keywords/login_keywords.robot
-Resource    ${CURDIR}/../../keywords/product_keywords.robot
-Resource    ${CURDIR}/../../keywords/cart_keywords.robot
-Resource    ${CURDIR}/../../keywords/product_detail_keywords.robot
-Resource    ${CURDIR}/../../keywords/cart_navbar_keywords.robot
-Resource    ${CURDIR}/../../keywords/address_keywords.robot
+Resource    ${CURDIR}/../resource/import/import.robot
+Resource    ${CURDIR}/../keywords/login_keywords.robot
+Resource    ${CURDIR}/../keywords/product_keywords.robot
+Resource    ${CURDIR}/../keywords/cart_keywords.robot
+Resource    ${CURDIR}/../keywords/product_detail_keywords.robot
+Resource    ${CURDIR}/../keywords/cart_navbar_keywords.robot
+Resource    ${CURDIR}/../keywords/address_keywords.robot
 Test Setup    Open Swag Labs Website With Chrome Browser
 Test Teardown    Close Browser
 

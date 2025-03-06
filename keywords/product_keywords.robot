@@ -5,7 +5,7 @@ Add '${product_name}' To Cart From Product List Page
         Verify Add ${product_name} Then Add Button Change To Remove Button
         ${number of product}=    Convert To Integer    ${number of product}
         ${number of product}=    Evaluate    ${number of product} + 1
-        cart_navbar_keywords.Verify Number Of Product Add To Cart    ${number of product}
+        cart_navbar_keywords.Verify The Number Of Products Added To The Cart    ${number of product}
     END
     Set Test Variable    ${number of product}    ${number of product}
 
@@ -16,8 +16,8 @@ Remove Product Out Of Cart
         Verify Remove '${product_name}' From Cart Remove Button Change To Add Button
         ${number of product}=    Convert To Integer    ${number of product}
         ${number of product}=    Evaluate    ${number of product} - 1
-        Run Keyword If    ${number of product} != 0    cart_navbar_keywords.Verify Number Of Product Add To Cart    ${number of product}
-        ...    ELSE    cart_navbar_keywords.Verify Remove All Number Of Product On Cart    ${number of product}
+        Run Keyword If    ${number of product} != 0    cart_navbar_keywords.Verify The Number Of Products Added To The Cart    ${number of product}
+        ...    ELSE    cart_navbar_keywords.Verify Removed All Number Of Product On Cart    ${number of product}
     END
 
 Access To Detail Page By '${product_name}'
@@ -51,12 +51,12 @@ Click Cart Button
 
 Click Product Name
     [Arguments]    ${product_name}
-    ${locator.product_url}=    common_keywords.Change Product Name    ${product_name}    ${locator.product_name}
+    ${locator.product_url}    common_keywords.Change Product Name    ${product_name}    ${locator.product_name}
     common_keywords.Click By Element    ${locator.product_url}
 
 Click Product Image
     [Arguments]    ${product_name}
-    ${locator.product_url}=    common_keywords.Change Product Name    ${product_name}    ${locator.product_image}
+    ${locator.product_url}    common_keywords.Change Product Name    ${product_name}    ${locator.product_image}
     common_keywords.Click By Element    ${locator.product_url}
 
 Verify Access To Product Page Success
