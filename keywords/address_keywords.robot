@@ -1,5 +1,5 @@
 *** Keywords ***
-Information '${firstname}' and '${lastname}' and '${zipcode}' Data
+Information '${firstname}' And '${lastname}' And '${zipcode}' Data
     Input Firstname    ${firstname}
     Input Lastname    ${lastname}
     Input Zipcode    ${zipcode}
