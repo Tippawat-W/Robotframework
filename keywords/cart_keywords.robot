@@ -3,16 +3,14 @@ Access To Address Page
     Click Checkout Button
     address_keywords.Verify Access To Address Page Success
 
-Verify Cart Page With Product On Cart
-    [Arguments]    ${product_name}
+Verify Cart Page With '${product_name}' On Cart
     FOR    ${product_name}    IN  @{product_name.values()}
         Verify Display Product To Cart Page Success    ${product_name}
     END
 
-Access To Product Detail Page
-    [Arguments]    ${product_name}
+Access To '${product_name}' Detail Page
    Click Product Name    ${product_name}
-    product_detail_keywords.Verify Product Detail Success    ${product_name}
+    product_detail_keywords.Verify '${product_name}' Detail Success
 
 Back To Product List Page On Cart Page
     Click Continue Button On Cart Page
