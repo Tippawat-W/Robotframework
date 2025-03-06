@@ -1,12 +1,12 @@
 *** Setting ***
-Resource    ${CURDIR}/../../resource/import/import.robot
-Resource    ${CURDIR}/../../keywords/login_keywords.robot
-Resource    ${CURDIR}/../../keywords/product_keywords.robot
-Resource    ${CURDIR}/../../keywords/cart_keywords.robot
-Resource    ${CURDIR}/../../keywords/address_keywords.robot
-Resource    ${CURDIR}/../../keywords/payment_keywords.robot
-Resource    ${CURDIR}/../../keywords/finish_keywords.robot
-Resource    ${CURDIR}/../../keywords/cart_navbar_keywords.robot
+Resource    ${CURDIR}/../resource/import/import.robot
+Resource    ${CURDIR}/../keywords/login_keywords.robot
+Resource    ${CURDIR}/../keywords/product_keywords.robot
+Resource    ${CURDIR}/../keywords/cart_keywords.robot
+Resource    ${CURDIR}/../keywords/address_keywords.robot
+Resource    ${CURDIR}/../keywords/payment_keywords.robot
+Resource    ${CURDIR}/../keywords/finish_keywords.robot
+Resource    ${CURDIR}/../keywords/cart_navbar_keywords.robot
 Test Teardown    Close Browser
 
 *** Test Cases ***
@@ -22,4 +22,4 @@ Order Product Success
     And Access To Payment Page
     And Check Product Name    ${product_name}
     And Access To Finish Page
-    Then Success Order
+    Then Verify Order Products Is a Success

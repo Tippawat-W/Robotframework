@@ -1,8 +1,8 @@
 *** Setting ***
-Resource    ${CURDIR}/../../resource/import/import.robot
-Resource    ${CURDIR}/../../keywords/login_keywords.robot
-Resource    ${CURDIR}/../../keywords/product_keywords.robot
-Resource    ${CURDIR}/../../keywords/burger_navbar_keywords.robot
+Resource    ${CURDIR}/../resource/import/import.robot
+Resource    ${CURDIR}/../keywords/login_keywords.robot
+Resource    ${CURDIR}/../keywords/product_keywords.robot
+Resource    ${CURDIR}/../keywords/burger_navbar_keywords.robot
 Test Teardown    Close Browser
 
 *** Test Cases ***
