@@ -14,8 +14,8 @@ Verify That User Can Add Product To Cart When User Click Add To Cart Button On P
     And Click Login Button
     And Verify Access To Product Page Success
     When Add '${product_name}' To Cart From Product List Page
-    Then Then Verify Add ${product_name.no_1} To Cart And Button Change To Remove Correct  
-    And Then Verify Add ${product_name.no_2} To Cart And Button Change To Remove Correct  
+    Then Then Verify Add ${product_name.no_1} Then Add Button Change To Remove Button
+    And Then Verify Add ${product_name.no_2} Then Add Button Change To Remove Button
 
 Verify That User Can Remove Product From Cart When User Click Remove Button On Product List Page.
     [Tags]    PL_007    High
@@ -24,8 +24,8 @@ Verify That User Can Remove Product From Cart When User Click Remove Button On P
     And Verify Access To Product Page Success
     And Add '${product_name}' To Cart From Product List Page
     When Remove Product Out Of Cart    ${product_name}
-    Then Verify Remove '${product_name.no_1}' From Cart And Button Change To Add Correct
-    And Verify Remove '${product_name.no_2}' From Cart And Button Change To Add Correct
+    Then Verify Remove '${product_name.no_1}' From Cart Remove Button Change To Add Button
+    And Verify Remove '${product_name.no_2}' From Cart Remove Button Change To Add Button
 
 Verify That System Rediect To Product Detail Page When Click Product Name.
     [Tags]    PL_008    Medium
