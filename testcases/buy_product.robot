@@ -18,8 +18,8 @@ Order Product Success
     When Add '${product_name}' To Cart From Product List Page
     And Access To Cart Page
     And Access To Address Page
-    And Information '${address_valid.firstname}' and '${address_valid.lastname}' and '${address_valid.zipcode}' Data
+    And Information '${address_valid.firstname}' And '${address_valid.lastname}' And '${address_valid.zipcode}' Data
     And Access To Payment Page
     And Check Product Name    ${product_name}
     And Access To Finish Page
-    Then Verify Order Products Is a Success
+    Then Verify Order Products Is A Success

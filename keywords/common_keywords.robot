@@ -23,9 +23,9 @@ Check Text Should Be
 
 Change Name To Url
     [Arguments]    ${product_name}    ${locator_url}  
-    ${product_name_temp}=    String.Convert to lower case    ${product_name}
-    ${product_name_temp}=    String.Replace string    ${product_name_temp}    ${SPACE}    -
-    ${locator.product_url}=    String.Replace string    ${locator_url}    {product_name}    ${product_name_temp}
+    ${product_name_temp}    String.Convert to lower case    ${product_name}
+    ${product_name_temp}    String.Replace string    ${product_name_temp}    ${SPACE}    -
+    ${locator.product_url}    String.Replace string    ${locator_url}    {product_name}    ${product_name_temp}
     [Return]    ${locator.product_url}
 
 Change Product Name

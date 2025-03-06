@@ -55,5 +55,5 @@ Click Remove Button
 
 Verify Remove Product Success
     [Arguments]    ${product_name}
-    ${locator.product}=    common_keywords.Change Name To Url    ${product_name}    ${cart_locator.remove_button}
+    ${locator.product}    common_keywords.Change Name To Url    ${product_name}    ${cart_locator.remove_button}
     SeleniumLibrary.Element Should Not Be Visible    ${locator.product}
