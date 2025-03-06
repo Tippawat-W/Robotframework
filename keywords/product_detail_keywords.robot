@@ -8,7 +8,7 @@ Back To Product List Page On Product Detail Page
 
 Add Product To Cart On Product Detail
     Add Item To Cart
-    Verify Add To Cart Button Change To Remove Correct On Product Detail Page
+    Verify Add To Cart Button Change To Remove Button On Product Detail Page
     ${number of product}=    Convert To Integer    ${number of product}
     ${number of product}=    Evaluate    ${number of product} + 1
     cart_navbar_keywords.Verify Number Of Product Add To Cart    ${number of product}
@@ -32,7 +32,7 @@ Click Back To Products Button
 Add Item To Cart
     common_keywords.Click By Element    ${locator.product_detail_add_button}
 
-Verify Add To Cart Button Change To Remove Correct On Product Detail Page
+Verify Add To Cart Button Change To Remove Button On Product Detail Page
     common_keywords.Check Text Should Be    ${locator.product_detail_remove_button}    Remove
 
 Remove Item From Cart
