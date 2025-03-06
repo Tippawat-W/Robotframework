@@ -13,9 +13,9 @@ Test Teardown    Close Browser
 Order Product Success
     [Tags]    High
     Given Open Swag Labs Website With Chrome Browser
-    And Login To System is '${valid_user.id}' And '${valid_user.password}'
+    And Login To The System With '${valid_user.id}' And '${valid_user.password}'
     And Click Login Button
-    When Add Product To Cart On Product List Page    ${product_name}
+    When Add '${product_name}' To Cart From Product List Page
     And Access To Cart Page
     And Access To Address Page
     And Information '${address_valid.firstname}' and '${address_valid.lastname}' and '${address_valid.zipcode}' Data

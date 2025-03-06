@@ -22,8 +22,7 @@ Remove Product Out Of Cart On Product Detail
     Run Keyword If    ${number of product} != 0    cart_navbar_keywords.Verify Number Of Product Add To Cart    ${number of product}
     ...    ELSE    cart_navbar_keywords.Verify Remove All Number Of Product On Cart    ${number of product}
 
-Verify Product Detail Success
-    [Arguments]    ${product_name}
+Verify '${product_name}' Detail Success
     ${locator.product_url}=    common_keywords.Change Product Name    ${product_name}    ${locator.product_detail_name}
     common_keywords.Check Text Should Be    ${locator.product_url}    ${product_name}
 

@@ -1,5 +1,5 @@
 *** Keywords ***
-Login To System is '${id}' And '${password}'
+Login To The System With '${id}' And '${password}'
     Input Username Id    ${id}
     login_keywords.Input Username Password    ${password}
 
