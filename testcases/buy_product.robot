@@ -10,7 +10,7 @@ Resource    ${CURDIR}/../keywords/cart_navbar_keywords.robot
 Test Teardown    Close Browser
 
 *** Test Cases ***
-Order Product Success
+Verify That User Can Order Product Success
     [Tags]    High
     Given Open Swag Labs Website With Chrome Browser
     And Login To The System With '${valid_user.id}' And '${valid_user.password}'
