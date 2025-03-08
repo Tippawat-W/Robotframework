@@ -1,25 +1,25 @@
 *** Keywords ***
 Open Website
     [Arguments]    ${url}    ${browser}
-    SeleniumLibrary.Open Browser    ${url}    ${browser}
+    Open Browser    ${url}    ${browser}
 
 Open Swag Labs Website With Chrome Browser
-    SeleniumLibrary.Open browser    ${web_site.saucedemo}    ${web_brower.chrome}
+    Open browser    ${web_site.saucedemo}    ${web_brower.chrome}
 
 Input Data
     [Arguments]    ${locator_field}    ${data}    ${timeout}=${GLOBAL_TIMEOUT}
-    SeleniumLibrary.Wait Until Element Is Visible    ${locator_field}    ${timeout}
-    SeleniumLibrary.Input Text    ${locator_field}    ${data}
+    Wait Until Element Is Visible    ${locator_field}    ${timeout}
+    Input Text    ${locator_field}    ${data}
 
 Click By Element
     [Arguments]    ${locator_field}    ${timeout}=${GLOBAL_TIMEOUT}
-    SeleniumLibrary.Wait Until Element Is Visible    ${locator_field}    ${timeout}
-    SeleniumLibrary.Click Element    ${locator_field}
+    Wait Until Element Is Visible    ${locator_field}    ${timeout}
+    Click Element    ${locator_field}
 
 Check Text Should Be
     [Arguments]    ${locator_field}    ${data}    ${timeout}=${GLOBAL_TIMEOUT}
-    SeleniumLibrary.Wait Until Element Contains    ${locator_field}    ${data}    ${timeout}
-    SeleniumLibrary.Element Text Should Be    ${locator_field}    ${data}
+    Wait Until Element Contains    ${locator_field}    ${data}    ${timeout}
+    Element Text Should Be    ${locator_field}    ${data}
 
 Change Name To Url
     [Arguments]    ${product_name}    ${locator_url}  
@@ -52,9 +52,9 @@ Count The Number On Cart Icon When Remove Product From Cart
 Verify The Number Of Products On Cart Icon Is Same As Product Is Purchased
     ${number of product}    Convert To String    ${number of product}
     ${cart_navbar_locator.number_of_product}    String.Replace string    ${cart_navbar_locator.number_of_product}    {number_of_product}    ${number_of_product}
-    common_keywords.Check Text Should Be    ${cart_navbar_locator.number_of_product}    ${number of product}
+    Check Text Should Be    ${cart_navbar_locator.number_of_product}    ${number of product}
 
 Verify Removed All Number Of Product On Cart Icon
     ${number of product}    Convert To String    ${number of product}
     ${cart_navbar_locator.number_of_product}    String.Replace string    ${cart_navbar_locator.number_of_product}    {number_of_product}    ${number_of_product}
-    SeleniumLibrary.Element Should Not Be Visible    ${cart_navbar_locator.number_of_product}
+    Element Should Not Be Visible    ${cart_navbar_locator.number_of_product}
