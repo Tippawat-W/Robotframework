@@ -7,4 +7,4 @@ Install Library\
 pip3 install -r requirements.txt
 
 Run Command\
-robot testcase
+robot -v env:dev testcases
