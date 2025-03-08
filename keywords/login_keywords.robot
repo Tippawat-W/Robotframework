@@ -5,13 +5,13 @@ Login To The System With '${id}' And '${password}'
 
 Input Username Id
     [Arguments]    ${id}
-    SeleniumLibrary.Input Text    ${login_locator.username_id}    ${id}
+    common_keywords.Input Data    ${login_locator.username_id}    ${id}
 
 Input Username Password
     [Arguments]    ${password}
-    SeleniumLibrary.Input Text    ${login_locator.username_password}    ${password}
+    common_keywords.Input Data    ${login_locator.username_password}    ${password}
 
-Click Login Button
+Click Login Button On Landing Page
     common_keywords.Click By Element    ${login_locator.click_button_login}
 
 Verify That System Login has Failed

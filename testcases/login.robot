@@ -10,28 +10,28 @@ Verify That System Can Login Success.
     [Tags]    LG_001    High
     Given Open Swag Labs Website With Chrome Browser
     When Login To The System With '${valid_user.id}' And '${valid_user.password}'
-    And Click Login Button
-    Then Verify Access To Product Page Success
+    And Click Login Button On Landing Page
+    Then Verify Access To Product List Page Success
 
 Verify That System Can Not Login When Use Invalid Id.
     [Tags]    LG_002    High
     Given Open Swag Labs Website With Chrome Browser
     When Login To The System With '${invalid_user.id}' And '${valid_user.password}'
-    And Click Login Button
+    And Click Login Button On Landing Page
     Then Verify That System Login has Failed
 
 Verify That System Can Not Login When Use Blank Id.
     [Tags]    LG_003    High
     Given Open Swag Labs Website With Chrome Browser
     When Login To The System With '${blank_user.id}' And '${valid_user.password}'
-    And Click Login Button
+    And Click Login Button On Landing Page
     Then Verify That System Require Username
 
 Verify That System Can Not Login When Use Invalid Password.
     [Tags]    LG_004    High
     Given Open Swag Labs Website With Chrome Browser
     When Login To The System With '${valid_user.id}' And ' ${invalid_user.password}'
-    And Click Login Button
+    And Click Login Button On Landing Page
     Then Verify That System Login has Failed
 
 
@@ -39,14 +39,14 @@ Verify That System Can Not Login When Use Blank Password.
     [Tags]    LG_005    High
     Given Open Swag Labs Website With Chrome Browser
     When Login To The System With '${valid_user.id}' And '${blank_user.password}'
-    And Click Login Button
+    And Click Login Button On Landing Page
     Then Verify That System Require Password
 
 Verify That System Can Login Out Success.
     [Tags]    LG_006    High
     Given Open Swag Labs Website With Chrome Browser
     And Login To The System With '${valid_user.id}' And '${valid_user.password}'
-    And Click Login Button
-    And Verify Access To Product Page Success
-    When Logout From System
+    And Click Login Button On Landing Page
+    And Verify Access To Product List Page Success
+    When Click Logout From System On Navbar
     Then Verify That System Logout has Success

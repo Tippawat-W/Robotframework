@@ -12,14 +12,16 @@ Test Teardown    Close Browser
 *** Test Cases ***
 Verify That User Can Order Product Success
     [Tags]    High
-    Given Open Swag Labs Website With Chrome Browser
-    And Login To The System With '${valid_user.id}' And '${valid_user.password}'
-    And Click Login Button
-    When Add '${product_name}' To Cart From Product List Page
-    And Access To Cart Page
-    And Access To Address Page
-    And Information '${address_valid.firstname}' And '${address_valid.lastname}' And '${address_valid.zipcode}' Data
-    And Access To Payment Page
-    And Check Product Name    ${product_name}
-    And Access To Finish Page
+    [Setup]    Open The Website And Login The System
+    Given Add Multiple '${product_name}' To Cart From Product List Page
+    And Click Cart Button On Navbar
+    And Verify Access To Cart Page Success
+    And Click Checkout Button On Cart Page
+    And Verify Access To Address Page Success
+    And Fill in the information '${address_valid.firstname}' And '${address_valid.lastname}' And '${address_valid.zipcode}' Data
+    And Click Continue Button On Address Page
+    And Verify Access To Payment Page Success
+    And Check the All Product On the Payment Page    ${product_name}
+    When Click Finish Button On Payment Page
+    And Verify Access To Finish Page Success
     Then Verify Order Products Is A Success

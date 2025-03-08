@@ -1,5 +1,5 @@
 *** Keywords ***
-Logout From System
+Click Logout From System On Navbar
     Click Open Burger Menu
     Click Logout
 
