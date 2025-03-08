@@ -6,11 +6,11 @@ Check the All Product On the Payment Page
     END
 
 Click Finish Button On Payment Page
-    common_keywords.Click By Element    ${payment_locator.finish_button}
+    Click By Element    ${payment_locator.finish_button}
 
 Check Item By '${product_name}'
-    ${locator.product}    common_keywords.Change Product Name    ${product_name}    ${payment_locator.product_name}
-    common_keywords.Check Text Should Be    ${locator.product}    ${product_name}
+    ${locator.product}    Change Product Name    ${product_name}    ${payment_locator.product_name}
+    Check Text Should Be    ${locator.product}    ${product_name}
 
 Verify Access To Payment Page Success
-    common_keywords.Check Text Should Be    ${payment_locator.header}    Checkout: Overview
+    Check Text Should Be    ${payment_locator.header}    Checkout: Overview
