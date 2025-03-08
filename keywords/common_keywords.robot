@@ -4,7 +4,7 @@ Open Website
     SeleniumLibrary.Open Browser    ${url}    ${browser}
 
 Open Swag Labs Website With Chrome Browser
-    SeleniumLibrary.Open Browser     ${web_site.saucedemo}        ${web_brower.chrome}
+    SeleniumLibrary.Open browser    ${web_site.saucedemo}    ${web_brower.chrome}
 
 Input Data
     [Arguments]    ${locator_field}    ${data}    ${timeout}=${GLOBAL_TIMEOUT}
@@ -29,6 +29,32 @@ Change Name To Url
     [Return]    ${locator.product_url}
 
 Change Product Name
-    [Arguments]    ${product_name}    ${locator_product}  
+    [Arguments]    ${product_name}    ${locator_product}
     ${locator.product}=    String.Replace string    ${locator_product}    {product_name}    ${product_name}
     [Return]    ${locator.product}
+
+Open The Website And Login The System
+    Open Swag Labs Website With Chrome Browser
+    Login To The System With '${valid_user.id}' And '${valid_user.password}'
+    Click Login Button On Landing Page
+    Verify Access To Product List Page Success
+
+Count The Number On Cart Icon When Add Product To Cart
+    ${number of product}    Convert To Integer    ${number of product}
+    ${number of product}    Evaluate    ${number of product} + 1
+    Set Test Variable    ${number of product}    ${number of product}
+
+Count The Number On Cart Icon When Remove Product From Cart
+    ${number of product}    Convert To Integer    ${number of product}
+    ${number of product}    Evaluate    ${number of product} - 1
+    Set Test Variable    ${number of product}    ${number of product}
+
+Verify The Number Of Products On Cart Icon Is Same As Product Is Purchased
+    ${number of product}    Convert To String    ${number of product}
+    ${cart_navbar_locator.number_of_product}    String.Replace string    ${cart_navbar_locator.number_of_product}    {number_of_product}    ${number_of_product}
+    common_keywords.Check Text Should Be    ${cart_navbar_locator.number_of_product}    ${number of product}
+
+Verify Removed All Number Of Product On Cart Icon
+    ${number of product}    Convert To String    ${number of product}
+    ${cart_navbar_locator.number_of_product}    String.Replace string    ${cart_navbar_locator.number_of_product}    {number_of_product}    ${number_of_product}
+    SeleniumLibrary.Element Should Not Be Visible    ${cart_navbar_locator.number_of_product}

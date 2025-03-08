@@ -1,12 +1,8 @@
 *** Keywords ***
-Information '${firstname}' And '${lastname}' And '${zipcode}' Data
+Fill in the information '${firstname}' And '${lastname}' And '${zipcode}' Data
     Input Firstname    ${firstname}
     Input Lastname    ${lastname}
     Input Zipcode    ${zipcode}
-
-Access To Payment Page
-    Click Continue Button
-    payment_keywords.Verify Access To Payment Page Success
 
 Input Firstname
     [Arguments]    ${firstname}
@@ -20,7 +16,7 @@ Input Zipcode
     [Arguments]    ${zipcode}
     common_keywords.Input Data    ${address_locator.zipcode}    ${zipcode} 
 
-Click Continue Button
+Click Continue Button On Address Page
     common_keywords.Click By Element    ${address_locator.continue}
 
 Verify Access To Address Page Success
